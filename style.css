@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #444;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #666;
+  }
+  
+  .oculto {
+    display: none;
+  }
+  
+  .personagens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .personagem {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    transition: border 0.3s;
+  }
+  
+  .personagem img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .personagem.selecionado {
+    border-color: #00ff00;
+  }
+  #arena {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: #222;
+    border: 4px solid #555;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .lutador {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: auto;
+    transition: transform 0.1s;
+  }
+  
+  #lutador1 {
+    left: 100px;
+  }
+  
+  #lutador2 {
+    right: 100px;
+    transform: scaleX(-1); /* Espelha o oponente */
+  }
+
+  #mostradoresAtaques {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 999;
+  }
+  
+  .ataques-jogador {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .ataque-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+  }
+  
+  .ataque-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .ataque-info p {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 4px;
+  }
+  
+  .barrinha {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    background: #444;
+    top: 10px;
+    left: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .barrinha.direita {
+    left: auto;
+    right: 10px;
+  }
+  
+  .vida {
+    height: 100%;
+    width: 100%;
+    background: rgb(8, 240, 8);
+  }
+  .ataques-em-jogo {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .ataques-em-jogo:first-child {
+    left: 10px; /* Ataques do jogador 1, à esquerda */
+  }
+  
+  .ataques-em-jogo:last-child {
+    right: 10px; /* Ataques do jogador 2, à direita */
+  }
+  
+  .ataque-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .ataques-em-jogo div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: bold;
+  }
+/* Só aparece durante o jogo */
+#jogo .ataques-em-jogo {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  #jogo .ataques-em-jogo:first-child {
+    left: 10px;
+  }
+  
+  #jogo .ataques-em-jogo:last-child {
+    right: 10px;
+  }
+  
+  .ataque-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .ataques-em-jogo div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: bold;
+  }
+    

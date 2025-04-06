@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Street Fight Cagado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- MENU INICIAL -->
+  <div id="menu">
+    <h1>Street Fight Cagado</h1>
+    <button onclick="escolherModo('cpu')">1P vs CPU</button>
+    <button onclick="escolherModo('pvp')">1P vs 2P</button>
+  </div>
+
+  <!-- SELEÇÃO DE PERSONAGEM -->
+  <div id="selecao" class="oculto">
+    <h2>Selecione seu personagem</h2>
+    <!-- Mostradores de Ataques -->
+<div id="mostradoresAtaques">
+    <!-- Jogador 1 -->
+    <div class="ataques-jogador" id="ataquesJogador1">
+      <div class="ataque-info"><img src="imagens/ataque1.png" class="ataque-img"><p>Cabeçada=z</p></div>
+      <div class="ataque-info"><img src="imagens/ataque2.png" class="ataque-img"><p>Cagada Dimensional=x</p></div>
+      <div class="ataque-info"><img src="imagens/ataque3.png" class="ataque-img"><p>Linguada=c</p></div>
+      <div class="ataque-info"><img src="imagens/ataque4.png" class="ataque-img"><p>Chute=v</p></div>
+      <div class="ataque-info"><img src="imagens/ataque5.png" class="ataque-img"><p>Soco Duplo=b</p></div>
+    </div>
+  
+    <!-- Jogador 2 -->
+    <div class="ataques-jogador" id="ataquesJogador2">
+      <div class="ataque-info"><img src="imagens/ataque1.png" class="ataque-img"><p>Cabeçada=1</p></div>
+      <div class="ataque-info"><img src="imagens/ataque2.png" class="ataque-img"><p>Cagada Dimensional=2</p></div>
+      <div class="ataque-info"><img src="imagens/ataque3.png" class="ataque-img"><p>Linguada=3</p></div>
+      <div class="ataque-info"><img src="imagens/ataque4.png" class="ataque-img"><p>Chute=4</p></div>
+      <div class="ataque-info"><img src="imagens/ataque5.png" class="ataque-img"><p>Soco Duplo=5</p></div>
+    </div>
+  </div>
+  
+    <div class="personagens" id="listaPersonagens"></div>
+    <button id="confirmarSelecao">Confirmar</button>
+  </div>
+
+  <!-- JOGO -->
+  <div id="jogo" class="oculto">
+    <h2>Round <span id="numeroRound">1</span></h2>
+  
+    <div id="arena">
+      <div class="barrinha">
+        <div id="vida1" class="vida"></div>
+      </div>
+      <div class="barrinha direita">
+        <div id="vida2" class="vida"></div>
+      </div>
+  
+      <img id="lutador1" class="lutador" src="" alt="Jogador 1">
+      <img id="lutador2" class="lutador" src="" alt="Jogador 2">
+    </div>
+  
+    <p id="mensagem"></p>
+  </div>  
+
+  <script src="script.js"></script>
+</body>
+</html>
